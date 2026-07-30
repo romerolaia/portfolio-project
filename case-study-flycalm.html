@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+  <style>
+    body { margin: 0; background: #FDFCF8; }
+    ::selection { background: oklch(0.55 0.12 42 / 0.25); }
+    a { color: oklch(0.4 0.11 42); text-decoration: none; }
+    a:hover { color: oklch(0.3 0.1 42); }
+    @media (max-width: 860px) {
+      .fc-grid { grid-template-columns: 1fr !important; }
+      .fc-meta { grid-template-columns: 1fr 1fr !important; }
+    }
+  </style>
+</helmet>
+
+<div style="background:#FDFCF8; color:#211D18; font-family:'Inter',sans-serif; min-height:100vh; overflow-x:hidden;">
+
+  <nav style="position:sticky; top:0; z-index:50; display:flex; align-items:center; justify-content:space-between; padding:28px clamp(20px,5vw,64px); background:#FDFCF8E6; backdrop-filter:blur(6px); border-bottom:1px solid #E4DDCF;">
+    <a href="index.html" style="display:inline-flex; align-items:center; gap:10px; font-size:14px; color:oklch(0.45 0.12 42);">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"></path><path d="M12 19l-7-7 7-7"></path></svg>
+      Back to portfolio
+    </a>
+    <div style="font-size:12px; letter-spacing:0.14em; text-transform:uppercase; color:#8a8072;">Case study</div>
+  </nav>
+
+  <header style="padding:clamp(70px,10vw,130px) clamp(20px,5vw,64px) clamp(40px,6vw,70px); max-width:1400px; margin:0 auto;">
+    <div style="font-size:14px; letter-spacing:0.14em; text-transform:uppercase; color:oklch(0.5 0.11 42); margin-bottom:20px;">Health &amp; Wellness · App</div>
+    <h1 style="font-family:'Merriweather',serif; font-weight:300; font-size:clamp(38px,6vw,68px); line-height:1.12; margin:0 0 28px; max-width:900px; text-wrap:pretty;">FlyCalm — turning flight anxiety into a guided ritual.</h1>
+    <p style="font-size:19px; line-height:1.65; color:#57503f; margin:0; max-width:660px; text-wrap:pretty;">A redesign of onboarding and in-flight breathing flows for anxious flyers, built around the moments people actually reach for the app: the gate, the climb, and turbulence.</p>
+  </header>
+
+  <section style="padding:0 clamp(20px,5vw,64px) clamp(50px,7vw,90px); max-width:1400px; margin:0 auto;">
+    <div class="fc-meta" style="display:grid; grid-template-columns:repeat(4,1fr); gap:28px; padding:32px 0; border-top:1px solid #E4DDCF; border-bottom:1px solid #E4DDCF;">
+      <div>
+        <div style="font-size:12px; letter-spacing:0.12em; text-transform:uppercase; color:#8a8072; margin-bottom:8px;">Role</div>
+        <div style="font-size:16px;">Product designer — research, UX, UI</div>
+      </div>
+      <div>
+        <div style="font-size:12px; letter-spacing:0.12em; text-transform:uppercase; color:#8a8072; margin-bottom:8px;">Timeline</div>
+        <div style="font-size:16px;">14 weeks, 2025</div>
+      </div>
+      <div>
+        <div style="font-size:12px; letter-spacing:0.12em; text-transform:uppercase; color:#8a8072; margin-bottom:8px;">Team</div>
+        <div style="font-size:16px;">2 engineers, 1 clinical advisor</div>
+      </div>
+      <div>
+        <div style="font-size:12px; letter-spacing:0.12em; text-transform:uppercase; color:#8a8072; margin-bottom:8px;">Outcome</div>
+        <div style="font-size:16px; color:oklch(0.45 0.12 42);">+38% session completion</div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:0 clamp(20px,5vw,64px) clamp(60px,8vw,110px); max-width:1400px; margin:0 auto;">
+    <div style="display:flex; justify-content:center;">
+      <img src="assets/img/flycalm-screen.png" alt="FlyCalm app screen" draggable="false" style="display:block; width:auto; height:clamp(380px,48vw,600px); object-fit:contain;" />
+    </div>
+  </section>
+
+  <section style="background:#F7F2E6; padding:clamp(60px,9vw,120px) clamp(20px,5vw,64px);">
+    <div class="fc-grid" style="max-width:1400px; margin:0 auto; display:grid; grid-template-columns:0.45fr 1fr; gap:clamp(32px,5vw,80px);">
+      <div style="font-size:14px; letter-spacing:0.14em; text-transform:uppercase; color:oklch(0.5 0.11 42);">The problem</div>
+      <div style="max-width:720px;">
+        <h2 style="font-family:'Merriweather',serif; font-weight:300; font-size:clamp(26px,3.2vw,38px); line-height:1.25; margin:0 0 24px; text-wrap:pretty;">People downloaded FlyCalm in a panic and abandoned it in a menu.</h2>
+        <p style="font-size:17px; line-height:1.7; color:#57503f; margin:0 0 18px; text-wrap:pretty;">Analytics showed a sharp drop-off: 61% of new users never finished a first breathing session. Most installs happened within 48 hours of a flight — often at the airport — yet onboarding asked for a profile, a goal, and a reminder schedule before anything calming happened.</p>
+        <p style="font-size:17px; line-height:1.7; color:#57503f; margin:0; text-wrap:pretty;">The content was good. The path to it was five taps too long, and it assumed a calm, unhurried person.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:clamp(60px,9vw,120px) clamp(20px,5vw,64px); max-width:1400px; margin:0 auto;">
+    <div class="fc-grid" style="display:grid; grid-template-columns:0.45fr 1fr; gap:clamp(32px,5vw,80px);">
+      <div style="font-size:14px; letter-spacing:0.14em; text-transform:uppercase; color:oklch(0.5 0.11 42);">Research</div>
+      <div style="max-width:720px;">
+        <p style="font-size:17px; line-height:1.7; color:#57503f; margin:0 0 32px; text-wrap:pretty;">Twelve interviews with self-identified anxious flyers, plus a diary study across nine flights. Three findings shaped everything after.</p>
+        <div style="display:grid; gap:20px;">
+          <div style="border-top:1px solid #E4DDCF; padding-top:20px;">
+            <h3 style="font-family:'Merriweather',serif; font-weight:400; font-size:20px; margin:0 0 8px;">Anxiety peaks are short and specific</h3>
+            <p style="font-size:16px; line-height:1.65; color:#57503f; margin:0;">Boarding, takeoff, and turbulence. Nobody browses a library mid-climb.</p>
+          </div>
+          <div style="border-top:1px solid #E4DDCF; padding-top:20px;">
+            <h3 style="font-family:'Merriweather',serif; font-weight:400; font-size:20px; margin:0 0 8px;">Hands and eyes are unreliable</h3>
+            <p style="font-size:16px; line-height:1.65; color:#57503f; margin:0;">People close their eyes, grip armrests, and hold the phone one-handed against a tray table.</p>
+          </div>
+          <div style="border-top:1px solid #E4DDCF; padding-top:20px;">
+            <h3 style="font-family:'Merriweather',serif; font-weight:400; font-size:20px; margin:0 0 8px;">Airplane mode breaks trust</h3>
+            <p style="font-size:16px; line-height:1.65; color:#57503f; margin:0;">Any spinner in the air reads as "the app failed me" at the worst possible moment.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#211D18; color:#FAF7F1; padding:clamp(60px,9vw,120px) clamp(20px,5vw,64px);">
+    <div class="fc-grid" style="max-width:1400px; margin:0 auto; display:grid; grid-template-columns:0.45fr 1fr; gap:clamp(32px,5vw,80px);">
+      <div style="font-size:14px; letter-spacing:0.14em; text-transform:uppercase; color:oklch(0.72 0.1 42);">Design decisions</div>
+      <div style="max-width:720px; display:grid; gap:34px;">
+        <div>
+          <h3 style="font-family:'Merriweather',serif; font-weight:400; font-size:clamp(20px,2.4vw,26px); margin:0 0 10px;">01 — Breathe first, sign up never</h3>
+          <p style="font-size:17px; line-height:1.7; color:#C9C0AE; margin:0; text-wrap:pretty;">The app opens straight into a 90-second guided breath. Account creation moved to the end of the second session, framed as saving progress rather than a gate.</p>
+        </div>
+        <div>
+          <h3 style="font-family:'Merriweather',serif; font-weight:400; font-size:clamp(20px,2.4vw,26px); margin:0 0 10px;">02 — One moment, one screen</h3>
+          <p style="font-size:17px; line-height:1.7; color:#C9C0AE; margin:0; text-wrap:pretty;">Instead of a library, the home screen asks a single question — "where are you right now?" — with three answers: gate, takeoff, turbulence. Each maps to one prepared session.</p>
+        </div>
+        <div>
+          <h3 style="font-family:'Merriweather',serif; font-weight:400; font-size:clamp(20px,2.4vw,26px); margin:0 0 10px;">03 — Designed for closed eyes</h3>
+          <p style="font-size:17px; line-height:1.7; color:#C9C0AE; margin:0; text-wrap:pretty;">Haptic pacing carries the breath rhythm, so the session works with the screen face-down. Controls sit in the bottom third at 56px targets, reachable one-handed.</p>
+        </div>
+        <div>
+          <h3 style="font-family:'Merriweather',serif; font-weight:400; font-size:clamp(20px,2.4vw,26px); margin:0 0 10px;">04 — Offline by default</h3>
+          <p style="font-size:17px; line-height:1.7; color:#C9C0AE; margin:0; text-wrap:pretty;">Sessions for an upcoming flight are pre-downloaded when a boarding pass date is added. Nothing in the air depends on a connection.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:clamp(60px,9vw,120px) clamp(20px,5vw,64px); max-width:1400px; margin:0 auto;">
+    <div style="font-size:14px; letter-spacing:0.14em; text-transform:uppercase; color:oklch(0.5 0.11 42); margin-bottom:40px;">Results after 3 months</div>
+    <div class="fc-meta" style="display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(24px,4vw,60px);">
+      <div>
+        <div style="font-family:'Merriweather',serif; font-size:clamp(38px,5vw,60px); color:oklch(0.45 0.12 42); line-height:1;">+38%</div>
+        <p style="font-size:16px; line-height:1.6; color:#57503f; margin:14px 0 0;">First-session completion, up from 39% to 54%.</p>
+      </div>
+      <div>
+        <div style="font-family:'Merriweather',serif; font-size:clamp(38px,5vw,60px); color:oklch(0.45 0.12 42); line-height:1;">2.6×</div>
+        <p style="font-size:16px; line-height:1.6; color:#57503f; margin:14px 0 0;">More sessions started in the air, where the app matters most.</p>
+      </div>
+      <div>
+        <div style="font-family:'Merriweather',serif; font-size:clamp(38px,5vw,60px); color:oklch(0.45 0.12 42); line-height:1;">4.7</div>
+        <p style="font-size:16px; line-height:1.6; color:#57503f; margin:14px 0 0;">App Store rating, with "it just starts" recurring in reviews.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:0 clamp(20px,5vw,64px) clamp(70px,10vw,130px); max-width:1400px; margin:0 auto;">
+    <div class="fc-grid" style="display:grid; grid-template-columns:0.45fr 1fr; gap:clamp(32px,5vw,80px);">
+      <div style="font-size:14px; letter-spacing:0.14em; text-transform:uppercase; color:oklch(0.5 0.11 42);">What I'd do next</div>
+      <p style="font-size:17px; line-height:1.7; color:#57503f; margin:0; max-width:720px; text-wrap:pretty;">The three-moment model works for short-haul flights but flattens long-haul, where anxiety is more diffuse. I'd test a quieter ambient mode for cruise, and bring the clinical advisor into copy review earlier — the language of the sessions did more for trust than any interface decision.</p>
+    </div>
+  </section>
+
+  <section style="background:#211D18; color:#FAF7F1; padding:clamp(60px,10vw,120px) clamp(20px,5vw,64px);">
+    <div style="max-width:900px; margin:0 auto; text-align:center;">
+      <h2 style="font-family:'Merriweather',serif; font-weight:300; font-size:clamp(28px,4vw,44px); margin:0 0 32px; line-height:1.2;">Want the longer version?</h2>
+      <a href="mailto:romerocarollaia@gmail.com" style="display:inline-flex; font-size:17px; padding:16px 36px; border:1px solid #FAF7F1; color:#FAF7F1; border-radius:100px;">romerocarollaia@gmail.com</a>
+      <div style="margin-top:48px;"><a href="index.html" style="font-size:15px; color:#C9C0AE;">← Back to portfolio</a></div>
+    </div>
+  </section>
+
+  <footer style="padding:32px clamp(20px,5vw,64px); text-align:center; font-size:13px; color:#8a8072; background:#211D18;">
+    © 2026 Laia Romero
+  </footer>
+
+</div>
+</x-dc>
+</body>
+</html>
