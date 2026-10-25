@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>window.__resources={"https://unpkg.com/react@18.3.1/umd/react.production.min.js":"../../assets/vendor/react.production.min.js","https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js":"../../assets/vendor/react-dom.production.min.js"};</script>
+<script src="../../support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="../../assets/fonts/fonts.css">
+  <style>
+    body { margin: 0; background: #F7F6FB; }
+    ::selection { background: #EDE9FF; }
+    a { color: #5B3BE8; text-decoration: none; }
+    a:hover { color: #3F24B8; }
+    @keyframes caretBlink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+    [data-reveal] { opacity: 0; transform: translateY(18px); transition: opacity 0.7s ease, transform 0.8s cubic-bezier(.22,1,.36,1); }
+    [data-reveal].is-in { opacity: 1; transform: none; }
+    @media (max-width: 860px) {
+      .ck-grid { grid-template-columns: 1fr !important; }
+      .ck-split { grid-template-columns: 1fr !important; }
+      .ck-split > .ck-shot { max-width: 280px; }
+      .ck-pair { max-width: 520px; }
+      .ck-meta { grid-template-columns: 1fr 1fr !important; }
+      .ck-hints { grid-template-columns: 1fr 1fr !important; }
+      .ck-id { grid-template-columns: 1fr !important; }
+    }
+    @media (max-width: 560px) {
+      .ck-hints { grid-template-columns: 1fr !important; }
+      .ck-head { flex-direction: column; align-items: flex-start !important; }
+    }
+  </style>
+  <script src="../../i18n.js"></script>
+</helmet>
+<div style="background:#F7F6FB; color:#14123A; font-family:'Inter',sans-serif; min-height:100vh; overflow-x:hidden;">
+
+  <nav style="position:sticky; top:0; z-index:50; display:flex; align-items:center; justify-content:space-between; gap:16px; padding:24px clamp(20px,5vw,64px); background:#F7F6FBE6; backdrop-filter:blur(8px); border-bottom:1px solid #E2DFF0;">
+    <a href="../../apps/" style="display:inline-flex; align-items:center; gap:10px; font-size:14px; color:#5B3BE8;">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"></path><path d="M12 19l-7-7 7-7"></path></svg>
+      App Development
+    </a>
+    <div style="display:flex; align-items:center; gap:14px;">
+      <div style="font-size:12px; letter-spacing:0.14em; text-transform:uppercase; color:#5B5878;">Project</div>
+      <div data-lang-switch="" data-lang-base="en" style="display:flex; align-items:center; gap:2px; font-size:13px; letter-spacing:0.06em; color:#5B3BE8;"><button data-set-lang="es" aria-label="Español" style="background:none; border:none; padding:8px 5px; cursor:pointer; color:inherit; font:inherit;">ES</button><span aria-hidden="true" style="opacity:0.4;">/</span><button data-set-lang="en" aria-label="English" style="background:none; border:none; padding:8px 5px; cursor:pointer; color:inherit; font:inherit;">EN</button></div>
+    </div>
+  </nav>
+
+  <header style="padding:clamp(60px,9vw,120px) clamp(20px,5vw,64px) clamp(36px,5vw,60px); max-width:1400px; margin:0 auto; box-sizing:border-box;">
+    <div class="ck-head" style="display:flex; align-items:center; gap:24px; margin-bottom:36px;">
+      <img src="../../assets/criptika/icon.png" alt="Criptika app icon" width="96" height="96" style="display:block; width:96px; height:96px; border-radius:22px; box-shadow:0 12px 32px rgba(20,18,58,0.18);">
+      <div style="display:flex; flex-direction:column; gap:10px;">
+        <div style="font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:34px; letter-spacing:-0.02em; line-height:1;">Criptika</div>
+        <span style="align-self:flex-start; font-family:'DM Mono',monospace; font-size:12px; padding:5px 11px; border-radius:100px; background:#FFF1DB; color:#7A4A00;">Coming soon to the App Store</span>
+      </div>
+    </div>
+    <div style="font-size:14px; letter-spacing:0.14em; text-transform:uppercase; color:#5B3BE8; margin-bottom:20px;">Daily puzzle · iOS &amp; iPadOS</div>
+    <h1 style="font-family:'Merriweather',serif; font-weight:300; font-size:clamp(36px,5.6vw,66px); line-height:1.12; margin:0 0 28px; max-width:920px; text-wrap:pretty;">A cryptic clue a day, <em style="font-style:italic; font-weight:400; color:#5B3BE8;">in Spanish.</em></h1>
+    <p style="font-size:19px; line-height:1.65; color:#5B5878; margin:0; max-width:640px; text-wrap:pretty;">Criptika is a daily cryptic puzzle app for iPhone and iPad. New clues every day, the same for everyone.</p>
+  </header>
+
+  <section style="padding:0 clamp(20px,5vw,64px) clamp(44px,6vw,80px); max-width:1400px; margin:0 auto; box-sizing:border-box;">
+    <div class="ck-meta" style="display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:28px; padding:30px 0; border-top:1px solid #E2DFF0; border-bottom:1px solid #E2DFF0;">
+      <div>
+        <div style="font-size:12px; letter-spacing:0.12em; text-transform:uppercase; color:#5B5878; margin-bottom:8px;">Role</div>
+        <div style="font-size:16px; line-height:1.5;">Creator, designer and owner</div>
+      </div>
+      <div>
+        <div style="font-size:12px; letter-spacing:0.12em; text-transform:uppercase; color:#5B5878; margin-bottom:8px;">Platform</div>
+        <div style="font-size:16px; line-height:1.5;">iPhone and iPad, iOS 17 or later</div>
+      </div>
+      <div>
+        <div style="font-size:12px; letter-spacing:0.12em; text-transform:uppercase; color:#5B5878; margin-bottom:8px;">Built with</div>
+        <div style="font-size:16px; line-height:1.5;">Swift, SwiftUI, StoreKit 2</div>
+      </div>
+      <div>
+        <div style="font-size:12px; letter-spacing:0.12em; text-transform:uppercase; color:#5B5878; margin-bottom:8px;">Status</div>
+        <div style="font-size:16px; line-height:1.5; color:#5B3BE8;">Coming soon to the App Store</div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:0 clamp(20px,5vw,64px) clamp(70px,9vw,120px); max-width:1400px; margin:0 auto; box-sizing:border-box;">
+    <div data-reveal="" style="border-radius:28px; background:#EDE9FF; padding:clamp(28px,5vw,64px) 20px; box-sizing:border-box; display:flex; justify-content:center;">
+      <div style="width:clamp(220px,26vw,320px);"><img src="../../assets/criptika/screens/01.png" alt="Criptika: un críptico nuevo cada día, pantalla de inicio" loading="lazy" decoding="async" width="720" height="1565" style="display:block; width:100%; height:auto; border-radius:22px; box-shadow:0 18px 44px rgba(20,18,58,0.16);"></div>
+    </div>
+  </section>
+
+  <section style="padding:0 clamp(20px,5vw,64px) clamp(70px,9vw,120px); max-width:1400px; margin:0 auto; box-sizing:border-box;">
+    <div class="ck-grid" style="display:grid; grid-template-columns:0.45fr 1fr; gap:clamp(28px,5vw,80px);">
+      <div style="font-size:14px; letter-spacing:0.14em; text-transform:uppercase; color:#5B3BE8;">What it is</div>
+      <div data-reveal="" class="ck-split" style="display:grid; grid-template-columns:minmax(0,1fr) clamp(200px,22vw,280px); gap:clamp(28px,4vw,56px); align-items:start;">
+        <div style="max-width:560px;">
+        <h2 style="font-family:'Merriweather',serif; font-weight:300; font-size:clamp(26px,3.2vw,38px); line-height:1.25; margin:0 0 24px; text-wrap:pretty;">Every day, a hidden word.</h2>
+        <p style="font-size:17px; line-height:1.7; color:#5B5878; margin:0 0 18px; text-wrap:pretty;">A cryptic clue joins a definition and a piece of wordplay that lead to the same answer. Criptika gives you one free cryptic every day and three with Premium. You type the answer letter by letter, ask for hints when you need them, and the clue is explained once it's solved.</p>
+        <p style="font-size:17px; line-height:1.7; color:#5B5878; margin:0; text-wrap:pretty;">There are no accounts and no ads. Progress, stats and streaks stay on the device.</p>
+        </div>
+        <div class="ck-shot"><img src="../../assets/criptika/screens/02.png" alt="Así se juega: cada frase esconde una palabra" loading="lazy" decoding="async" width="720" height="1565" style="display:block; width:100%; height:auto; border-radius:22px; box-shadow:0 18px 44px rgba(20,18,58,0.16);"></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:0 clamp(20px,5vw,64px) clamp(70px,9vw,120px); max-width:1400px; margin:0 auto; box-sizing:border-box;">
+    <div class="ck-grid" style="display:grid; grid-template-columns:0.45fr 1fr; gap:clamp(28px,5vw,80px);">
+      <div style="font-size:14px; letter-spacing:0.14em; text-transform:uppercase; color:#5B3BE8;">My role</div>
+      <div data-reveal="" style="max-width:720px;">
+        <p style="font-size:17px; line-height:1.7; color:#5B5878; margin:0; text-wrap:pretty;">Criptika is my own product. I came up with the idea, designed the whole experience, from the game rules, hints and Free and Premium plans to the interface and visual identity, and I own the app.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#14123A; color:#F2F0FF; padding:clamp(60px,9vw,120px) clamp(20px,5vw,64px);">
+    <div style="max-width:1400px; margin:0 auto;">
+      <div class="ck-grid" style="display:grid; grid-template-columns:0.45fr 1fr; gap:clamp(28px,5vw,80px); margin-bottom:48px;">
+        <div style="font-size:14px; letter-spacing:0.14em; text-transform:uppercase; color:#B4B0D0;">Hints</div>
+        <div class="ck-split" style="display:grid; grid-template-columns:minmax(0,1fr) clamp(200px,22vw,280px); gap:clamp(28px,4vw,56px); align-items:center;">
+          <div style="max-width:560px;">
+          <h2 style="font-family:'Merriweather',serif; font-weight:300; font-size:clamp(26px,3.2vw,38px); line-height:1.25; margin:0 0 16px; text-wrap:pretty;">Four kinds of help, each with a daily limit.</h2>
+          <p style="font-size:17px; line-height:1.7; color:#B4B0D0; margin:0; text-wrap:pretty;">Three hints highlight parts of the clue; the fourth reveals a letter. Free includes one of each per day, Premium two.</p>
+          </div>
+          <div class="ck-shot" data-reveal=""><img src="../../assets/criptika/screens/03.png" alt="Pistas: definición, indicador, material y revelar letra" loading="lazy" decoding="async" width="720" height="1565" style="display:block; width:100%; height:auto; border-radius:22px; box-shadow:0 18px 44px rgba(20,18,58,0.16); box-shadow:0 18px 44px rgba(0,0,0,0.4);"></div>
+        </div>
+      </div>
+      <div class="ck-hints" style="display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:16px;">
+        <div data-reveal="" style="background:#1F1C4A; border:1px solid #34305E; border-radius:20px; padding:24px;">
+          <div style="font-family:'DM Mono',monospace; font-size:12px; color:#B4B0D0; margin-bottom:18px;">01</div>
+          <h3 style="font-family:'Bricolage Grotesque',sans-serif; font-weight:700; font-size:22px; margin:0 0 10px;">Definición</h3>
+          <p style="font-size:15px; line-height:1.6; color:#B4B0D0; margin:0;">Highlights the part of the clue that defines the answer.</p>
+        </div>
+        <div data-reveal="" style="background:#1F1C4A; border:1px solid #34305E; border-radius:20px; padding:24px;">
+          <div style="font-family:'DM Mono',monospace; font-size:12px; color:#B4B0D0; margin-bottom:18px;">02</div>
+          <h3 style="font-family:'Bricolage Grotesque',sans-serif; font-weight:700; font-size:22px; margin:0 0 10px;">Indicador</h3>
+          <p style="font-size:15px; line-height:1.6; color:#B4B0D0; margin:0;">Highlights the word that signals the wordplay.</p>
+        </div>
+        <div data-reveal="" style="background:#1F1C4A; border:1px solid #34305E; border-radius:20px; padding:24px;">
+          <div style="font-family:'DM Mono',monospace; font-size:12px; color:#B4B0D0; margin-bottom:18px;">03</div>
+          <h3 style="font-family:'Bricolage Grotesque',sans-serif; font-weight:700; font-size:22px; margin:0 0 10px;">Material</h3>
+          <p style="font-size:15px; line-height:1.6; color:#B4B0D0; margin:0;">Highlights the letters or words the answer is built from.</p>
+        </div>
+        <div data-reveal="" style="background:#1F1C4A; border:1px solid #34305E; border-radius:20px; padding:24px;">
+          <div style="font-family:'DM Mono',monospace; font-size:12px; color:#B4B0D0; margin-bottom:18px;">04</div>
+          <h3 style="font-family:'Bricolage Grotesque',sans-serif; font-weight:700; font-size:22px; margin:0 0 10px;">Revelar letra</h3>
+          <p style="font-size:15px; line-height:1.6; color:#B4B0D0; margin:0;">Reveals one letter of the answer.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:clamp(70px,9vw,120px) clamp(20px,5vw,64px); max-width:1400px; margin:0 auto; box-sizing:border-box;">
+    <div class="ck-grid" style="display:grid; grid-template-columns:0.45fr 1fr; gap:clamp(28px,5vw,80px);">
+      <div style="font-size:14px; letter-spacing:0.14em; text-transform:uppercase; color:#5B3BE8;">Free and Premium</div>
+      <div data-reveal="" class="ck-split" style="display:grid; grid-template-columns:minmax(0,1fr) clamp(200px,22vw,280px); gap:clamp(28px,4vw,56px); align-items:start;">
+        <div style="min-width:0; max-width:620px;">
+        <p style="font-size:17px; line-height:1.7; color:#5B5878; margin:0 0 28px; text-wrap:pretty;">Premium is a monthly subscription through the App Store. The price comes from the App Store and isn't written into the app.</p>
+        <div style="background:#FFFFFF; border:1px solid #E2DFF0; border-radius:20px; overflow:hidden; font-size:15px;">
+          <div style="display:grid; grid-template-columns:1.3fr 1fr 1fr; gap:12px; padding:14px 20px; border-bottom:1px solid #E2DFF0; font-family:'DM Mono',monospace; font-size:12px; letter-spacing:0.06em; text-transform:uppercase; color:#5B5878;"><span>Plan</span><span>Free</span><span style="color:#5B3BE8;">Premium</span></div>
+          <div style="display:grid; grid-template-columns:1.3fr 1fr 1fr; gap:12px; padding:14px 20px; border-bottom:1px solid #F0EEF7;"><span style="color:#5B5878;">Cryptic of the day</span><span>Yes</span><span>Yes</span></div>
+          <div style="display:grid; grid-template-columns:1.3fr 1fr 1fr; gap:12px; padding:14px 20px; border-bottom:1px solid #F0EEF7;"><span style="color:#5B5878;">Extra cryptic</span><span>No</span><span>Yes</span></div>
+          <div style="display:grid; grid-template-columns:1.3fr 1fr 1fr; gap:12px; padding:14px 20px; border-bottom:1px solid #F0EEF7;"><span style="color:#5B5878;">Exclusive cryptic</span><span>No</span><span>Yes</span></div>
+          <div style="display:grid; grid-template-columns:1.3fr 1fr 1fr; gap:12px; padding:14px 20px; border-bottom:1px solid #F0EEF7;"><span style="color:#5B5878;">Hints per day</span><span>1 of each</span><span>2 of each</span></div>
+          <div style="display:grid; grid-template-columns:1.3fr 1fr 1fr; gap:12px; padding:14px 20px;"><span style="color:#5B5878;">Library</span><span>Last 7 days</span><span>Complete</span></div>
+        </div>
+        </div>
+        <div class="ck-shot"><img src="../../assets/criptika/screens/06.png" alt="Criptika Premium: tres crípticos cada día, el doble de pistas y biblioteca completa" loading="lazy" decoding="async" width="720" height="1565" style="display:block; width:100%; height:auto; border-radius:22px; box-shadow:0 18px 44px rgba(20,18,58,0.16);"></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:0 clamp(20px,5vw,64px) clamp(70px,9vw,120px); max-width:1400px; margin:0 auto; box-sizing:border-box;">
+    <div class="ck-grid" style="display:grid; grid-template-columns:0.45fr 1fr; gap:clamp(28px,5vw,80px);">
+      <div style="font-size:14px; letter-spacing:0.14em; text-transform:uppercase; color:#5B3BE8;">Solutions, streaks and library</div>
+      <div data-reveal="" style="max-width:720px;">
+        <p style="font-size:17px; line-height:1.7; color:#5B5878; margin:0 0 18px; text-wrap:pretty;">Once a clue is solved, the app explains step by step how the answer is built. The library keeps past cryptics to look back on: the last seven days on Free, all of them with Premium.</p>
+        <p style="font-size:17px; line-height:1.7; color:#5B5878; margin:0 0 40px; text-wrap:pretty;">Stats are worked out from saved progress: cryptics solved, accuracy, days played, average time, hints used and the last seven days. A streak counts consecutive days, Madrid time, with at least one cryptic solved.</p>
+        <div class="ck-pair" style="display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:clamp(16px,3vw,32px);">
+          <img src="../../assets/criptika/screens/04.png" alt="Al resolverlo: explicación paso a paso de la solución" loading="lazy" decoding="async" width="720" height="1565" style="display:block; width:100%; height:auto; border-radius:22px; box-shadow:0 18px 44px rgba(20,18,58,0.16);">
+          <img src="../../assets/criptika/screens/05.png" alt="Racha y biblioteca de crípticos anteriores" loading="lazy" decoding="async" width="720" height="1565" style="display:block; width:100%; height:auto; border-radius:22px; box-shadow:0 18px 44px rgba(20,18,58,0.16);">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#FFFFFF; border-top:1px solid #E2DFF0; border-bottom:1px solid #E2DFF0; padding:clamp(60px,9vw,120px) clamp(20px,5vw,64px);">
+    <div style="max-width:1400px; margin:0 auto;">
+      <div class="ck-grid" style="display:grid; grid-template-columns:0.45fr 1fr; gap:clamp(28px,5vw,80px);">
+        <div style="font-size:14px; letter-spacing:0.14em; text-transform:uppercase; color:#5B3BE8;">Visual identity</div>
+        <div style="max-width:760px; min-width:0;">
+          <div id="ck-tiles" aria-hidden="true" style="display:flex; gap:6px; margin-bottom:40px;">
+            <span class="ck-tile" style="width:44px; height:52px; border-radius:10px; background:#5B3BE8; color:#FFFFFF; font-family:'DM Mono',monospace; font-weight:500; font-size:22px; display:flex; align-items:center; justify-content:center; opacity:0; transform:scale(0.85); transition:opacity 0.3s ease, transform 0.45s cubic-bezier(.34,1.56,.64,1);">E</span>
+            <span class="ck-tile" style="width:44px; height:52px; border-radius:10px; background:#5B3BE8; color:#FFFFFF; font-family:'DM Mono',monospace; font-weight:500; font-size:22px; display:flex; align-items:center; justify-content:center; opacity:0; transform:scale(0.85); transition:opacity 0.3s ease, transform 0.45s cubic-bezier(.34,1.56,.64,1);">N</span>
+            <span class="ck-tile" style="width:44px; height:52px; border-radius:10px; background:#FFB547; color:#14123A; font-family:'DM Mono',monospace; font-weight:500; font-size:22px; display:flex; align-items:center; justify-content:center; opacity:0; transform:scale(0.85); transition:opacity 0.3s ease, transform 0.45s cubic-bezier(.34,1.56,.64,1);">T</span>
+            <span class="ck-tile" style="width:44px; height:52px; border-radius:10px; background:#FFFFFF; border:2px solid #5B3BE8; box-sizing:border-box; color:#14123A; font-family:'DM Mono',monospace; font-weight:500; font-size:22px; display:flex; align-items:center; justify-content:center; opacity:0; transform:scale(0.85); transition:opacity 0.3s ease, transform 0.45s cubic-bezier(.34,1.56,.64,1);">R</span>
+            <span class="ck-tile" style="width:44px; height:52px; border-radius:10px; background:#FFFFFF; border:1.5px solid #E2DFF0; box-sizing:border-box; display:flex; align-items:center; justify-content:center; opacity:0; transform:scale(0.85); transition:opacity 0.3s ease, transform 0.45s cubic-bezier(.34,1.56,.64,1);"><span style="width:2px; height:22px; background:#5B3BE8; animation:caretBlink 1.1s steps(1) infinite;"></span></span>
+          </div>
+          <p style="font-size:17px; line-height:1.7; color:#5B5878; margin:0 0 36px; text-wrap:pretty;">Letter tiles are the core of the interface. A strong violet carries the brand, amber marks the letter in play, and the rest of the palette stays quiet so the clue comes first.</p>
+          <div class="ck-id" style="display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:14px; margin-bottom:36px;">
+            <div><div style="height:72px; border-radius:14px; background:#5B3BE8;"></div><div style="font-size:14px; margin-top:10px;">Violet</div><div style="font-family:'DM Mono',monospace; font-size:12px; color:#5B5878;">#5B3BE8</div></div>
+            <div><div style="height:72px; border-radius:14px; background:#FFB547;"></div><div style="font-size:14px; margin-top:10px;">Amber</div><div style="font-family:'DM Mono',monospace; font-size:12px; color:#5B5878;">#FFB547</div></div>
+            <div><div style="height:72px; border-radius:14px; background:#14123A;"></div><div style="font-size:14px; margin-top:10px;">Ink</div><div style="font-family:'DM Mono',monospace; font-size:12px; color:#5B5878;">#14123A</div></div>
+            <div><div style="height:72px; border-radius:14px; background:#F7F6FB; border:1px solid #E2DFF0; box-sizing:border-box;"></div><div style="font-size:14px; margin-top:10px;">Paper</div><div style="font-family:'DM Mono',monospace; font-size:12px; color:#5B5878;">#F7F6FB</div></div>
+          </div>
+          <div style="display:grid; gap:14px; border-top:1px solid #E2DFF0; padding-top:24px;">
+            <div style="display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:8px;"><span style="font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:26px;">Bricolage Grotesque</span><span style="font-size:14px; color:#5B5878;">Titles</span></div>
+            <div style="display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:8px;"><span style="font-family:'Inter',sans-serif; font-weight:500; font-size:22px;">Inter</span><span style="font-size:14px; color:#5B5878;">Text</span></div>
+            <div style="display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:8px;"><span style="font-family:'DM Mono',monospace; font-weight:500; font-size:22px;">DM Mono</span><span style="font-size:14px; color:#5B5878;">Letters and labels</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#14123A; color:#F2F0FF; padding:clamp(60px,10vw,120px) clamp(20px,5vw,64px);">
+    <div style="max-width:900px; margin:0 auto; text-align:center;">
+      <img src="../../assets/criptika/icon.png" alt="" width="64" height="64" style="display:block; width:64px; height:64px; border-radius:15px; margin:0 auto 28px;">
+      <h2 style="font-family:'Merriweather',serif; font-weight:300; font-size:clamp(28px,4vw,44px); margin:0 0 20px; line-height:1.2;">Coming soon to the App Store.</h2>
+      <p style="font-size:17px; line-height:1.6; color:#B4B0D0; margin:0 0 40px;">For iPhone and iPad, in Spanish.</p>
+      <a href="../../apps/" style="font-size:15px; color:#B4B0D0;" style-hover="color:#F2F0FF;">← Back to App Development</a>
+    </div>
+  </section>
+
+  <footer style="padding:28px clamp(20px,5vw,64px); display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:14px 28px; font-size:13px; color:#B4B0D0; background:#14123A; border-top:1px solid #34305E;">
+    <span>© 2026 Laia Romero</span>
+    <div style="display:flex; flex-wrap:wrap; gap:8px 24px;">
+      <a href="../../apps/criptika/privacy/" style="color:#B4B0D0;" style-hover="color:#F2F0FF;">Política de privacidad</a>
+      <a href="../../apps/criptika/terms/" style="color:#B4B0D0;" style-hover="color:#F2F0FF;">Términos de uso</a>
+      <a href="../../apps/criptika/support/" style="color:#B4B0D0;" style-hover="color:#F2F0FF;">Soporte y contacto</a>
+      <a href="../../privacy/" style="color:#B4B0D0;" style-hover="color:#F2F0FF;">Privacidad de la web</a>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount() {
+    this._t = [];
+    const els = Array.from(document.querySelectorAll('[data-reveal]'));
+    const tiles = document.getElementById('ck-tiles');
+    const playTiles = () => Array.from(document.querySelectorAll('.ck-tile')).forEach((t, i) =>
+      this._t.push(setTimeout(() => { t.style.opacity = '1'; t.style.transform = 'none'; }, i * 150)));
+    if (!('IntersectionObserver' in window)) { els.forEach(e => e.classList.add('is-in')); playTiles(); return; }
+    this._io = new IntersectionObserver(entries => entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      if (e.target === tiles) playTiles(); else e.target.classList.add('is-in');
+      this._io.unobserve(e.target);
+    }), { threshold: 0.15 });
+    els.forEach(e => this._io.observe(e));
+    if (tiles) this._io.observe(tiles);
+  }
+  componentWillUnmount() { if (this._io) this._io.disconnect(); (this._t || []).forEach(clearTimeout); }
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

@@ -1,46 +1,25 @@
-# Laia Romero — Product Design Portfolio
+# Laia Romero — Portfolio
 
-Personal portfolio site: work, process, skills, about and contact, plus an in-depth
-case study for **FlyCalm**.
+Static site, no build step. Public DNS for laiaromerodesign.com points to Vercel (www is a CNAME to vercel-dns; apex A record is a Vercel IP). Fonts and React are served from `assets/` (no third-party CDNs).
 
-## Live pages
+## Pages
 
-| Page | File |
+| URL | File |
 | --- | --- |
-| Portfolio (home) | `index.html` |
-| FlyCalm case study | `case-study-flycalm.html` |
+| / (Web Development) | `index.html` |
+| /design.html | `design.html` |
+| /case-study-flycalm.html | `case-study-flycalm.html` |
+| /apps/ (App Development) | `apps/index.html` |
+| /apps/criptika/ | `apps/criptika/index.html` |
+| /apps/criptika/privacy/ | `apps/criptika/privacy/index.html` |
+| /apps/criptika/terms/ | `apps/criptika/terms/index.html` |
+| /apps/criptika/support/ | `apps/criptika/support/index.html` |
+| /privacy/ (website privacy) | `privacy/index.html` |
 
-## Structure
-
-```
-.
-├── index.html               # Portfolio — hero, work carousel, process, skills, about, contact
-├── case-study-flycalm.html  # FlyCalm case study — problem, research, decisions, results
-├── support.js               # Component runtime
-├── image-slot.js            # Drag-and-drop image placeholder element
-└── assets/
-    ├── icons/               # Tool icons used by the Skills cards
-    └── img/                 # Portrait and project imagery
-```
+The Criptika privacy, terms and support pages are plain HTML (no JavaScript) so they load anywhere, including from the app and App Store Connect.
 
 ## Running locally
 
-The pages are static, but load their runtime over `file://` restrictions — serve the
-folder rather than double-clicking:
-
 ```bash
 python3 -m http.server 8000
-# open http://localhost:8000
 ```
-
-## Deploying
-
-Enable **GitHub Pages** on the `main` branch, root folder. The site is served as-is,
-no build step.
-
-## Design notes
-
-- Palette: cream `#FDFCF8` / `#F7F2E6`, ink `#3A342C`, terracotta accent
-- Type: Merriweather (display) + Inter (UI)
-- Work section is a drag-enabled carousel; Process uses inflating circles with
-  drifting particles; Skills cards fan out on hover
